@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 19:56:54 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/10/30 20:06:06 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/10/30 20:12:32 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 # include <iostream>
 # include <cmath>
 
-class Fixed
-{
+class Fixed {
 private:
 	int					_value;
 	static const int	_fractionalBits = 8;
+
 public:
 	Fixed(void);
 	Fixed(const Fixed &src);
