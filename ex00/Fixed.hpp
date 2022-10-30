@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 19:56:54 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/10/30 20:12:32 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/10/30 20:16:48 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	Fixed(const Fixed &src);
 	~Fixed(void);
 
-	Fixed	&operator=(const Fixed &rhs);
+	Fixed	&operator=(const Fixed &other);
 
 	int		getRawBits(void) const;
 	void	setRawBits(int const raw);
