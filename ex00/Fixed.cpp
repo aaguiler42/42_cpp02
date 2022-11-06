@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 19:56:56 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/10/30 20:16:52 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/11/06 10:52:10 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ Fixed::~Fixed(void)
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed	&Fixed::operator=(const Fixed &other)
+Fixed	&Fixed::operator=(const Fixed &rhs)
 {
 	std::cout << "Copy assigment operator called" << std::endl;
-	this->_value = other.getRawBits();
+	this->_value = rhs.getRawBits();
 	return (*this);
 }
 

@@ -6,12 +6,11 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 19:56:52 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/10/30 20:08:02 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/11/06 10:30:41 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-#include <iostream>
 
 int main( void ) {
 	Fixed a;
