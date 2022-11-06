@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 19:56:54 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/11/06 12:56:23 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/11/06 17:05:50 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ public:
 	Fixed operator*(const Fixed &rhs);
 	Fixed operator/(const Fixed &rhs);
 
-	Fixed operator++(void);
+	Fixed &operator++(void);
 	Fixed operator++(int);
-	Fixed operator--(void);
+	Fixed &operator--(void);
 	Fixed operator--(int);
 };
 

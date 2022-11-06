@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 19:56:56 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/11/06 12:59:11 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/11/06 17:15:54 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,9 +98,9 @@ Fixed Fixed::operator/(const Fixed &rhs)
 	return (Fixed(this->toFloat() / rhs.toFloat()));
 }
 
-Fixed Fixed::operator++(void)
+Fixed &Fixed::operator++(void)
 {
-	this->_value++;
+	this->_value += (1 << this->_fractionalBits);
 	return (*this);
 }
 
@@ -111,9 +111,9 @@ Fixed Fixed::operator++(int)
 	return (tmp);
 }
 
-Fixed Fixed::operator--(void)
+Fixed &Fixed::operator--(void)
 {
-	this->_value--;
+	this->_value -= (1 << this->_fractionalBits);
 	return (*this);
 }
 
@@ -124,22 +124,22 @@ Fixed Fixed::operator--(int)
 	return (tmp);
 }
 
-int		Fixed::getRawBits(void) const
+int Fixed::getRawBits(void) const
 {
 	return (this->_value);
 }
 
-void	Fixed::setRawBits(int const raw)
+void Fixed::setRawBits(int const raw)
 {
 	this->_value = raw;
 }
 
-float	Fixed::toFloat(void) const
+float Fixed::toFloat(void) const
 {
-	return(float(this->_value) / (1 << this->_fractionalBits));
+	return (float(this->_value) / (1 << this->_fractionalBits));
 }
 
-int		Fixed::toInt(void) const
+int Fixed::toInt(void) const
 {
 	return (this->_value >> this->_fractionalBits);
 }
