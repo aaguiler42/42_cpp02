@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 19:56:52 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/11/06 12:58:49 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/11/06 18:37:51 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ int main( void ) {
 	std::cout << x << std::endl;
 	std::cout << z << std::endl;
 
-	Fixed a( 2.0f );
-	Fixed b( 3.0f );
+	std::cout << "Max " << Fixed::max( x, z ) << std::endl;
+
+	Fixed const a( 2.0f );
+	Fixed const b( 3.0f );
 	std::cout << "a is " << a << std::endl;
 	std::cout << "b is " << b << std::endl;
 	if ( a == b )

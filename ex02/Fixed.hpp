@@ -6,7 +6,7 @@
 /*   By: aaguiler <aaguiler@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 19:56:54 by aaguiler          #+#    #+#             */
-/*   Updated: 2022/11/06 17:05:50 by aaguiler         ###   ########.fr       */
+/*   Updated: 2022/11/06 18:37:37 by aaguiler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,22 +35,27 @@ public:
 	float	toFloat(void) const;
 	int		toInt(void) const;
 
-	bool operator>(const Fixed &rhs);
-	bool operator<(const Fixed &rhs);
-	bool operator>=(const Fixed &rhs);
-	bool operator<=(const Fixed &rhs);
-	bool operator==(const Fixed &rhs);
-	bool operator!=(const Fixed &rhs);
+	bool operator>(const Fixed &rhs) const;
+	bool operator<(const Fixed &rhs) const;
+	bool operator>=(const Fixed &rhs) const;
+	bool operator<=(const Fixed &rhs) const;
+	bool operator==(const Fixed &rhs) const;
+	bool operator!=(const Fixed &rhs) const;
 
-	Fixed operator+(const Fixed &rhs);
-	Fixed operator-(const Fixed &rhs);
-	Fixed operator*(const Fixed &rhs);
-	Fixed operator/(const Fixed &rhs);
+	Fixed operator+(const Fixed &rhs) const;
+	Fixed operator-(const Fixed &rhs) const;
+	Fixed operator*(const Fixed &rhs) const;
+	Fixed operator/(const Fixed &rhs) const;
 
 	Fixed &operator++(void);
 	Fixed operator++(int);
 	Fixed &operator--(void);
 	Fixed operator--(int);
+
+	static Fixed &min(Fixed &a, Fixed &b);
+	static Fixed const &min(Fixed const &a, Fixed const &b);
+	static Fixed &max(Fixed &a, Fixed &b);
+	static Fixed const&max(Fixed const &a, Fixed const &b);
 };
 
 std::ostream	&operator<<(std::ostream &out, const Fixed &rhs);
